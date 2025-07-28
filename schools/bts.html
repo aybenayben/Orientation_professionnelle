@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTS - شهادة التقني العالي</title>
+    <link rel="stylesheet" href="../css/school-details.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/schools/bts-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .program-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .program {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .program:hover {
+            transform: translateY(-5px);
+        }
+
+        .program h3 {
+            color: #2c3e50;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+
+        .program ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .program ul li {
+            padding: 8px 0;
+            position: relative;
+            padding-right: 25px;
+        }
+
+        .program ul li:before {
+            content: '\f058';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            color: #3498db;
+            position: absolute;
+            right: 0;
+        }
+
+        .admission, .career {
+            background: #f8f9fa;
+            padding: 50px 0;
+            margin: 30px 0;
+        }
+
+        .admission ul, .career ul {
+            list-style: none;
+            padding: 0;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .admission ul li, .career ul li {
+            background: white;
+            margin: 10px 0;
+            padding: 15px 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+        }
+
+        .admission ul li:before, .career ul li:before {
+            content: '\f0a4';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            color: #3498db;
+            margin-left: 15px;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .info-section {
+            padding: 50px 0;
+            background: white;
+        }
+
+        .info-section p {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-size: 1.1em;
+            color: #555;
+            text-align: justify;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 0;
+            }
+
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1.2em;
+            }
+
+            .program-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <img src="../images/logo.png" alt="Logo">
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../index.html">الرئيسية</a></li>
+                    <li><a href="../about.html">معلومات عنا</a></li>
+                    <li><a href="../contact.html">اتصل بنا</a></li>
+                    <li><a href="../careers.html">المهن</a></li>
+                    <li><a href="../schools.html">المدارس والمعاهد</a></li>
+                    <li><a href="../student-info.html">معلومات الطالب</a></li>
+                    <li><a href="../parents-corner.html">ركن الآباء</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="school-details">
+        <section class="hero">
+            <div class="container">
+                <h1>BTS - شهادة التقني العالي</h1>
+                <p>برنامج تعليمي متميز يمنح شهادة التقني العالي (BTS) في مختلف التخصصات</p>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <div class="container">
+                <h2>نظرة عامة</h2>
+                <p>شهادة التقني العالي (BTS) هي برنامج تعليمي مدته سنتان يهدف إلى تكوين تقنيين عاليين متخصصين في مجالات مختلفة. يجمع البرنامج بين التكوين النظري والتطبيقي لتأهيل الطلاب للاندماج في سوق العمل أو متابعة دراساتهم العليا.</p>
+            </div>
+        </section>
+
+        <section class="programs">
+            <div class="container">
+                <h2>التخصصات المتاحة</h2>
+                <div class="program-list">
+                    <div class="program">
+                        <h3>المجال التقني والصناعي</h3>
+                        <ul>
+                            <li>الكهرباء الصناعية</li>
+                            <li>الصيانة الصناعية</li>
+                            <li>التصنيع الميكانيكي</li>
+                            <li>البناء والأشغال العمومية</li>
+                        </ul>
+                    </div>
+                    <div class="program">
+                        <h3>مجال التجارة والتسيير</h3>
+                        <ul>
+                            <li>المحاسبة والتسيير</li>
+                            <li>التجارة</li>
+                            <li>التسويق</li>
+                            <li>المعلوميات</li>
+                        </ul>
+                    </div>
+                    <div class="program">
+                        <h3>مجال الخدمات</h3>
+                        <ul>
+                            <li>السياحة والفندقة</li>
+                            <li>التنشيط السياحي</li>
+                            <li>السكرتارية الإدارية</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="admission">
+            <div class="container">
+                <h2>شروط القبول</h2>
+                <ul>
+                    <li>الحصول على شهادة البكالوريا</li>
+                    <li>اجتياز المباراة الوطنية للقبول</li>
+                    <li>التوفر على المعدل المطلوب حسب التخصص</li>
+                    <li>اجتياز المقابلة الشخصية (لبعض التخصصات)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="career">
+            <div class="container">
+                <h2>آفاق التشغيل</h2>
+                <p>يتمتع خريجو BTS بفرص عمل متنوعة في القطاعين العام والخاص:</p>
+                <ul>
+                    <li>العمل في المؤسسات الصناعية والتجارية</li>
+                    <li>إمكانية إنشاء مشاريع خاصة</li>
+                    <li>العمل في المكاتب الاستشارية والهندسية</li>
+                    <li>متابعة الدراسة في المدارس العليا والجامعات</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>جميع الحقوق محفوظة © 2024</p>
+        </div>
+    </footer>
+</body>
+</html>

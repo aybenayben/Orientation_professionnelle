@@ -1,0 +1,355 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #FFD700;
+    --text-color: #ffffff;
+    --card-bg: rgba(255, 255, 255, 0.1);
+    --header-bg: rgba(0, 0, 0, 0.9);
+    --section-bg: rgba(255, 255, 255, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a1a, #2c3e50);
+    color: var(--text-color);
+    min-height: 100vh;
+}
+
+/* الشريط العلوي */
+.main-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: var(--header-bg);
+    padding: 1rem 2rem;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* قسم من نحن */
+.about-section {
+    padding-top: 100px;
+    min-height: calc(100vh - 100px);
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.about-header h1 {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.divider {
+    height: 3px;
+    width: 100px;
+    background: var(--secondary-color);
+    margin: 0 auto;
+    animation: expandWidth 1.5s ease-in-out;
+}
+
+.about-content {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.about-image {
+    flex: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+.about-text h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin: 1.5rem 0 0.5rem;
+}
+
+.about-text p {
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: #ddd;
+}
+
+/* قسم القيم */
+.values-section {
+    margin-bottom: 4rem;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.values-section h2 {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.value-card {
+    background: var(--section-bg);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.value-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--secondary-color);
+}
+
+.quality-icon {
+    background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="30" viewBox="0 0 24 24" width="30" xmlns="http://www.w3.org/2000/svg"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 15.5h-1.5V14h-1v3H8v-3H7v4.5H5.5v-5c0-.55.45-1 1-1H11c.55 0 1 .45 1 1v5zm3.5 0H14v-6h3.5c.55 0 1 .45 1 1V16c0 .55-.45 1-1 1h-2v1.5zm-1-4.5H17v1h-2.5v-1zm0-3h-1V9c0-.55.45-1 1-1h2V7h-3V5.5H17c.55 0 1 .45 1 1V8c0 .55-.45 1-1 1h-2v1z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.innovation-icon {
+    background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="30" viewBox="0 0 24 24" width="30" xmlns="http://www.w3.org/2000/svg"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6C7.8 12.16 7 10.63 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.accessibility-icon {
+    background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="30" viewBox="0 0 24 24" width="30" xmlns="http://www.w3.org/2000/svg"><path d="M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.integrity-icon {
+    background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="30" viewBox="0 0 24 24" width="30" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.value-card h3 {
+    font-size: 1.3rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.value-card p {
+    color: #ddd;
+    line-height: 1.6;
+}
+
+/* قسم الفريق */
+.team-section {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.team-section h2 {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.team-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    color: #ddd;
+    line-height: 1.8;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.team-member {
+    background: var(--section-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.member-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    margin: 1rem 0 0.5rem;
+    color: var(--accent-color);
+}
+
+.member-title {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+/* الفوتر */
+footer {
+    background: var(--header-bg);
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.quick-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.quick-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.quick-links a:hover {
+    color: var(--accent-color);
+}
+
+.copyright {
+    color: #999;
+    font-size: 0.9rem;
+}
+
+/* الأنيميشن */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes expandWidth {
+    from { width: 0; }
+    to { width: 100px; }
+}
+
+/* تجاوب الموقع */
+@media (max-width: 992px) {
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .values-grid,
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .values-grid,
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}

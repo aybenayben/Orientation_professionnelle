@@ -1,0 +1,265 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #FFD700;
+    --text-color: #ffffff;
+    --card-bg: rgba(255, 255, 255, 0.1);
+    --header-bg: rgba(0, 0, 0, 0.9);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a1a, #2c3e50);
+    color: var(--text-color);
+    min-height: 100vh;
+    direction: rtl;
+}
+
+/* الشريط العلوي */
+.main-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: var(--header-bg);
+    padding: 1rem 2rem;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* عنوان الصفحة */
+.page-title {
+    margin-top: 100px;
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    margin-bottom: 2rem;
+}
+
+/* أنماط شريط البحث */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 1rem auto;
+    max-width: 500px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Cairo', sans-serif;
+}
+
+.search-bar button {
+    padding: 0.8rem 1.5rem;
+    margin-right: 0.5rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+/* أنماط أزرار التصفية */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.filter-buttons select {
+    padding: 0.6rem 1rem;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-family: 'Cairo', sans-serif;
+    cursor: pointer;
+    background-color: white;
+}
+
+.filter-buttons select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.page-title h1 {
+    font-size: 40px;
+    color: var(--text-color);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+/* قائمة المدارس */
+.schools-grid {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.school-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.school-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.school-logo {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.school-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.school-card:hover .school-logo img {
+    transform: scale(1.1);
+}
+
+.school-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.school-name {
+    color: var(--text-color);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.school-location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1.5rem;
+}
+
+.school-location i {
+    color: var(--accent-color);
+}
+
+.view-details-btn {
+    display: inline-block;
+    background: var(--accent-color);
+    color: var(--primary-color);
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid var(--accent-color);
+}
+
+.view-details-btn:hover {
+    background: transparent;
+    color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* تأثيرات الحركة */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* تجاوب الموقع */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .schools-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .page-title h1 {
+        font-size: 2rem;
+    }
+
+    .school-logo {
+        height: 180px;
+    }
+
+    .school-name {
+        font-size: 1.2rem;
+    }
+}

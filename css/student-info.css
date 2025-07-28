@@ -1,0 +1,94 @@
+.logo img {
+    height: 50px;
+}
+
+.main-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: #000000; /* أسود */
+    padding: 1rem 2rem;
+    z-index: 1000;
+}
+
+.student-info-container {
+    max-width: 800px;
+    margin: 120px auto 60px;
+    padding: 20px;
+}
+
+.student-form-section {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.student-form-section h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.student-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+.submit-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    background-color: #2980b9;
+}
+
+@media (max-width: 768px) {
+    .student-info-container {
+        margin: 100px 20px 40px;
+    }
+
+    .student-form-section {
+        padding: 20px;
+    }
+}

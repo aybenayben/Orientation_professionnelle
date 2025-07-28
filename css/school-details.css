@@ -1,0 +1,187 @@
+/* التنسيقات الرئيسية */
+body {
+    font-family: 'Cairo', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* تنسيق الشريط العلوي */
+.main-header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #2196F3;
+}
+
+/* تنسيق معلومات المدرسة */
+.school-details {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.school-header {
+    background: linear-gradient(135deg, #2196F3, #1976D2);
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.school-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* تنسيق أقسام المعلومات */
+.school-section {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.school-section:hover {
+    transform: translateY(-5px);
+}
+
+.school-section h2 {
+    color: #1976D2;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+}
+
+/* تنسيق شبكة المعلومات */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.info-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.info-item:hover {
+    background: #e3f2fd;
+}
+
+.info-item i {
+    font-size: 2rem;
+    color: #2196F3;
+    margin-bottom: 1rem;
+}
+
+.info-item h3 {
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+/* تنسيق القوائم */
+.school-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.school-section ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.school-section ul li:last-child {
+    border-bottom: none;
+}
+
+/* تنسيق معلومات القبول */
+.admission-info {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.admission-info p {
+    margin: 0.5rem 0;
+}
+
+.admission-info strong {
+    color: #1976D2;
+}
+
+/* تجاوب الموقع */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .school-header {
+        padding: 2rem 1rem;
+    }
+
+    .school-header h1 {
+        font-size: 2rem;
+    }
+
+    .school-section {
+        padding: 1.5rem;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}

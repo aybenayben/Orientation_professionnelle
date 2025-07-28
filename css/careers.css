@@ -1,0 +1,179 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #FFD700;
+    --text-color: #ffffff;
+    --card-bg: rgba(255, 255, 255, 0.1);
+    --header-bg: rgba(0, 0, 0, 0.9);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a1a, #2c3e50);
+    color: var(--text-color);
+    min-height: 100vh;
+}
+
+/* تنسيق الشعار */
+.logo img {
+    height: 50px;
+}
+
+/* الشريط العلوي */
+.main-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: var(--header-bg);
+    padding: 1rem 2rem;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* عنوان الصفحة */
+.page-title {
+    margin-top: 100px;
+    text-align: center;
+    padding: 2rem;
+}
+
+.page-title h1 {
+    font-size: 40px;
+    color: var(--text-color);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+/* شبكة المهن */
+.careers-grid {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.career-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.career-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.career-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.career-card h3 {
+    padding: 1rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.explore-btn {
+    display: block;
+    text-align: center;
+    padding: 0.8rem;
+    background: var(--accent-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    margin: 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.explore-btn:hover {
+    background: var(--text-color);
+}
+
+/* الفوتر */
+footer {
+    background: var(--header-bg);
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.quick-links {
+    margin-bottom: 1rem;
+}
+
+.quick-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+.copyright {
+    color: #888;
+}
+
+/* التجاوب */
+@media (max-width: 1024px) {
+    .careers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .careers-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

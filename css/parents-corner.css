@@ -1,0 +1,156 @@
+/* تنسيق الشعار */
+.logo img {
+    height: 50px;
+}
+
+/* تنسيق عام للصفحة */
+.parents-corner-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.parents-info-section {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.parents-info-section h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.parents-content h2 {
+    color: #3498db;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+/* تنسيق قسم النصائح */
+.advice-section {
+    margin: 3rem 0;
+}
+
+.advice-section h3 {
+    color: #2c3e50;
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid #3498db;
+}
+
+.advice-card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.advice-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.advice-card h4 {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.advice-card p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.advice-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.advice-card ul li {
+    color: #555;
+    margin-bottom: 0.5rem;
+    padding-right: 1.5rem;
+    position: relative;
+}
+
+.advice-card ul li:before {
+    content: '•';
+    color: #3498db;
+    position: absolute;
+    right: 0;
+}
+
+.advice-card.conclusion {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.advice-card.conclusion h4,
+.advice-card.conclusion p {
+    color: white;
+}
+
+/* تنسيق قسم التواصل */
+.contact-section {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+}
+
+.contact-section h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.contact-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #2980b9;
+}
+
+/* تنسيق متجاوب */
+@media (max-width: 768px) {
+    .parents-corner-container {
+        padding: 1rem;
+    }
+
+    .parents-info-section {
+        padding: 1.5rem;
+    }
+
+    .parents-info-section h1 {
+        font-size: 2rem;
+    }
+
+    .advice-card {
+        padding: 1rem;
+    }
+
+    .advice-card h4 {
+        font-size: 1.2rem;
+    }
+}
